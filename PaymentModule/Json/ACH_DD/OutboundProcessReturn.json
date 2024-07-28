@@ -1,0 +1,132 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/ACH DD.xlsx",
+  "Sheet" : "OutboundProcessReturn",
+  "Screenname" : "View Originated ACH Debits Summary "
+
+"PZSOVIEW" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PZSOVIEW"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "TransactionIdentification",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_ACH_DD_OUT_TXN_SUM__TXN_REF_NO']"
+	},
+
+	{
+	 "name" : "Search",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Search']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "CheckBox1",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='RSLT_CHKBOX0']"
+	},
+
+	{
+	 "name" : "ProcessReturn",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[@id='BTN_PROCESS_RETURN']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'ACH DD  Origination - Return')]" 
+	},
+
+	{
+	 "name" : "SourceCode",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_BRN_ACH_DD_OUT_RETURN__SOURCE_CODE']"
+	},
+
+	{
+	 "name" : "PrimaryReturnCode",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_BRN_ACH_DD_OUT_RETURN__RETURN_CD']"
+	},
+
+	{
+	 "name" : "Enrich",
+	 "action" : "clickjs",
+	 "Locator" : ".//button[@id='BLK_BRN_ACH_DD_OUT_RETURN__BTN_ENRICH']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[text()='Save']"
+	},
+
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'ACH DD  Origination - Return')]"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "ReturnReferenceNumber",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_BRN_ACH_DD_OUT_RETURN__RETURN_REF_NOI']"
+	},
+
+	{
+	 "name" : "Exit1",
+	 "action" : "Exitscreen"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	  "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'View Originated ACH Debits Summary')]"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "clickjs",
+	 "Locator" : ".//input[@id='BTN_EXIT']"
+	}
+
+]
+}

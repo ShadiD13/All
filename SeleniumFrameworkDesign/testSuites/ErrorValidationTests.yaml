@@ -1,0 +1,16 @@
+name: Suite
+parallel: tests
+configFailurePolicy: skip
+tests:
+  - name: Submit Order Test
+  parallel: tests
+  includedGroups: [ ErrorHandling ]
+  classes:
+    - rahulshettyacademy.tests.SubmitOrderTest
+
+  - name: Error Validations Test
+  parallel: tests
+  includedGroups: [ ErrorHandling ]
+  classes:
+    - rahulshettyacademy.tests.ErrorValidationsTest
+

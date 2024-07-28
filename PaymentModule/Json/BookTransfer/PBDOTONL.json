@@ -1,0 +1,127 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/BookTransfer.xlsx",
+  "Sheet" : "PBDOTONL",
+  "Screenname" : "Book Transfer Transaction Input "
+
+"PBDOTONL" :
+[
+	{
+	 "name" : "SwitchBranch",
+	 "action" : "Branch240"
+	},
+
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PBDOTONL"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "New",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='New']"
+	},
+
+	{
+	 "name" : "SourceCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BOOK_TXN__SOURCE_CODE']"
+	},
+
+	{
+	 "name" : "NetworkCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BOOK_TXN__NETWORK_CODE']"
+	},
+
+	{
+	 "name" : "DebtorAccount(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BOOK_TXN__DR_AC_NO']"
+	},
+	
+	{
+	 "name" : "CreditorAccount(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BOOK_TXN__CR_AC_NO']"
+	},
+
+	{
+	 "name" : "CreditCurrency",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_BOOK_TXN__CR_AC_CCY']"
+	}
+
+	{
+	 "name" : "CreditAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BOOK_TXN__CR_AMTI']"
+	},
+
+	{
+	 "name" : "InstructionDate",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BOOK_TXN__INSTRUCTION_DATEI']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Enrich",
+   	 "action" : "clickjs",
+    	 "Locator" : "//button[@id='BLK_BOOK_TXN__ENRICH']"
+	},
+
+	{
+	 "name" : "Pricing",
+	 "action" : "clickjs",
+	 "Locator" : ".//span[text()='Pricing']"
+	},
+	
+	{
+	 "name" : "Save",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Save']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+	
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "name" : "TransactionReferenceNumber",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_BOOK_TXN__TXN_REF_NOI']"
+	},
+	
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"
+	},
+
+	{
+	 "name" : "HomeBranch",
+	 "action" : "HomeBranch"
+	}
+
+]
+}

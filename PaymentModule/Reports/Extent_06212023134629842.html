@@ -1,0 +1,1812 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+	<meta charset='utf-8' /> 
+	<meta name='description' content='' />
+	<meta name='robots' content='noodp, noydir' />
+	<meta name='viewport' content='width=device-width, initial-scale=1' />
+	<meta id="timeStampFormat" name="timeStampFormat" content='MMM d, yyyy hh:mm:ss a'/>
+	
+	<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600' rel='stylesheet' type='text/css' />
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+		<link href='https://cdn.rawgit.com/anshooarora/extentreports-java/b4a58fcfd1e137bd9287244035a7c80d3d73b3af/dist/css/extent.css' type='text/css' rel='stylesheet' />
+	
+	<title>seleniumautomation</title>
+
+	<style type='text/css'>
+	</style>
+</head>
+
+	<body class='extent standard default hide-overflow '>
+		<div id='theme-selector' alt='Click to toggle theme. To enable by default, use theme configuration.' title='Click to toggle theme. To enable by default, use theme configuration.'>
+			<span><i class='material-icons'>desktop_windows</i></span>
+		</div>
+
+<nav>
+	<div class="nav-wrapper">
+		<a href="#!" class="brand-logo blue darken-3">Extent</a>
+
+		<!-- slideout menu -->
+		<ul id='slide-out' class='side-nav fixed hide-on-med-and-down'>
+			<li class='waves-effect active'><a href='#!' view='test-view' onclick="configureView(0);chartsView('test');"><i class='material-icons'>dashboard</i></a></li>
+						<li class='waves-effect'><a href='#!' onclick="configureView(-1);chartsView('dashboard');" view='dashboard-view'><i class='material-icons'>track_changes</i></i></a></li>
+		</ul>
+
+		<!-- report name -->
+		<span class='report-name'>Testautomation</span>
+		
+		<!-- report headline -->
+		<span class='report-headline'></span>
+
+		<!-- nav-right -->
+		<ul id='nav-mobile' class='right hide-on-med-and-down nav-right'>
+			<li>
+                <a href='#!'>
+                    <span class='label suite-start-time blue darken-3'>Jun 21, 2023 01:46:29 PM</span>
+				</a>
+			</li>
+			<li>
+                <a href='#!'>
+                    <span class='label blue darken-3'>3.1.5</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</nav>
+
+		<!-- container -->
+		<div class='container'>
+
+<div id='test-view' class='view'>
+				
+	<section id='controls'>
+		<div class='controls grey lighten-4'>
+			<!-- test toggle -->
+			<div class='chip transparent'>
+				<a class='dropdown-button tests-toggle' data-activates='tests-toggle' data-constrainwidth='true' data-beloworigin='true' data-hover='true' href='#'>
+					<i class='material-icons'>warning</i> Status
+				</a>
+				<ul id='tests-toggle' class='dropdown-content'>
+											<li status='pass'><a href='#!'>Pass <i class='material-icons green-text'>check_circle</i></a></li>
+						<li status='fail'><a href='#!'>Fail <i class='material-icons red-text'>cancel</i></a></li>
+					<li class='divider'></li>
+					<li status='clear' clear='true'><a href='#!'>Clear Filters <i class='material-icons'>clear</i></a></li>
+				</ul>
+			</div>
+			<!-- test toggle -->
+
+			<!-- category toggle -->
+			<!-- category toggle -->
+
+			<!-- clear filters -->
+			<div class='chip transparent hide'>
+				<a class='' id='clear-filters' alt='Clear Filters' title='Clear Filters'>
+					<i class='material-icons'>close</i> Clear
+				</a>
+			</div>
+			<!-- clear filters -->
+
+			<!-- enable dashboard -->
+			<div id='toggle-test-view-charts' class='chip transparent'>
+				<a class='pink-text' id='enable-dashboard' alt='Enable Dashboard' title='Enable Dashboard'>
+					<i class='material-icons'>track_changes</i> Dashboard
+				</a>
+			</div>
+			<!-- enable dashboard -->
+
+			<!-- search -->
+			<div class='chip transparent' alt='Search Tests' title='Search Tests'>
+				<a href="#" class='search-div'>
+					<i class='material-icons'>search</i> Search
+				</a>
+
+				<div class='input-field left hide'>
+					<input id='search-tests' type='text' class='validate browser-default' placeholder='Search Tests...'>
+				</div>
+				
+			</div>
+			<!-- search -->
+		</div>
+	</section>
+
+
+<div id='test-view-charts' class='subview-full'>
+	<div id='charts-row' class='row nm-v nm-h'>
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Tests</div>
+				<div class='chart-box'>
+					<canvas id='parent-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='57.143%'><span class='strong'>4</span> test(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='42.857%'>3</span> test(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='0%'>0</span> others
+				</div>
+			</div>
+		</div>
+		
+		<div class='col s12 m6 l6 np-h'>
+			<div class='card-panel nm-v'>
+				<div class='left panel-name'>Steps</div>
+				<div class='chart-box'>
+					<canvas id='child-analysis' width='100' height='80'></canvas>
+				</div>
+				<div class='block text-small'>
+					<span class='tooltipped' data-position='top' data-tooltip='48.729%'><span class='strong'>115</span> step(s) passed</span>
+				</div>
+				<div class='block text-small'>
+					<span class='strong tooltipped' data-position='top' data-tooltip='1.271%'>3</span> step(s) failed, <span class='strong tooltipped' data-position='top' data-tooltip='50%'>118</span> others
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>
+
+	<div class='subview-left left'>
+		
+		<div class='view-summary'>
+			<h5>Tests</h5>
+			<ul id='test-collection' class='test-collection'>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='1'>
+					<div class='test-heading'>
+						<span class='test-name'>PXDOTONL||TS_CRS_002||To check whether system allows to create an Outbound Cross Border Payments Transaction Input with below mentioned conditions:
+Network Code SWIFT
+Network Code Description Cross Boarder
+Transfer Type as Customer Transfer
+Transfer Currency as USD
+Debit Currency as JOD.
+
+Test Steps:
+--> To check whether system navigates to Outbound Cross Border Payments Transaction Input on entering function id of PXDOTONL.
+--> To check whether system allows the user to input all the mandatory field values under an Outbound Cross Border Payments Transaction Input screen.
+--> To check whether system allows an user to select the values for Source Code as MANL, Network Code as SWIFT and Transfer Type as Customer Transfer.
+--> To check whether system allows the user to input fields like Transfer Currency as USD, Transfer Amount, Debit Account, Debit Currency as JOD, Charge Whom as OUR, Account(59:Ultimate Beneficiary), BIC / Name Address1(59:Ultimate Beneficiary) and Bank Identifier Code(57: Account With Institution).
+--> Click on Enrich.
+--> Under Pricing tab, Verify the pricing amount for charge / Tax applied .
+--> To check whether system displays below Pricing Components under the Pricing tab as mentioned in scenario.
+FT_BRN_T_C_CHG
+FT_SWF_CLS_1_CHG
+FT_BRN_O_C_CHG
+FT_STD_CHG
+FT_FX_COM_CHG
+FT_SDT_COM_1_CHG.
+--> Click on Save Button.
+--> To check whether user will get the popup Information Message after click on Save Button.</span>
+						<span class='test-time'>Jun 21, 2023 01:46:31 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2023 01:46:31 PM</span>
+	<span class='label end-time'>Jun 21, 2023 01:49:04 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 33s+238ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:46:40 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134640214.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134640214.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134640214.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:46:40 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:46:43 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134643275.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134643275.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134643275.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:46:43 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:46:43 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134643738.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134643738.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134643738.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:46:43 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:46:44 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134644085.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134644085.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134644085.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:46:44 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:46:46 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134646622.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134646622.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134646622.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:46:46 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:46:49 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134649370.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134649370.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134649370.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:46:49 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:46:52 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134652241.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134652241.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134652241.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:46:52 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:46:54 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134654915.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134654915.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134654915.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:46:54 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:46:57 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134657271.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134657271.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134657271.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:46:57 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:46:57 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134657585.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134657585.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134657585.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:46:57 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:47:00 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134700174.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134700174.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134700174.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:47:00 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:47:02 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134702897.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134702897.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134702897.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:47:02 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:47:05 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134705598.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134705598.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134705598.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:47:05 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:47:18 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134718937.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134718937.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134718937.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:47:19 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:47:29 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134729165.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134729165.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134729165.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:47:29 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:47:57 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134757695.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134757695.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134757695.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:47:59 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:48:01 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134801200.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134801200.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134801200.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:48:01 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:04 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023134904302.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023134904302.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023134904302.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:04 PM</td>
+					<td class='step-details'>Execution Pass</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='2'>
+					<div class='test-heading'>
+						<span class='test-name'>PXDOTONL||TS_CRS_003||To check whether system allows to create an Outbound Cross Border Payments Transaction Input with below mentioned conditions:
+Network Code SWIFT
+Network Code Description Cross Boarder
+Transfer Type as Customer Transfer
+Transfer Currency as EUR
+Debit Currency as JOD.
+
+Test Steps:
+--> To check whether system navigates to Outbound Cross Border Payments Transaction Input on entering function id of PXDOTONL.
+--> To check whether system allows the user to input all the mandatory field values under an Outbound Cross Border Payments Transaction Input screen.
+--> To check whether system allows an user to select the values for Source Code as MANL, Network Code as SWIFT and Transfer Type as Customer Transfer.
+--> To check whether system allows the user to input fields like Transfer Currency as EUR, Transfer Amount, Debit Account, Debit Currency as JOD, Charge Whom as OUR, Account(59:Ultimate Beneficiary), BIC / Name Address1(59:Ultimate Beneficiary) and Bank Identifier Code(57: Account With Institution).
+--> Click on Enrich.
+--> Under Pricing tab, Verify the pricing amount for charge / Tax applied .
+-->  To check whether system displays below Pricing Components under the Pricing tab as mentioned in scenario.
+FT_BRN_T_C_CHG
+FT_SWF_CLS_1_CHG
+FT_BRN_O_C_CHG
+FT_STD_CHG
+FT_FX_COM_CHG
+FT_SDT_COM_1_CHG.
+--> Click on Save Button.
+--> To check whether user will get the popup Information Message after click on Save Button.</span>
+						<span class='test-time'>Jun 21, 2023 01:49:04 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2023 01:49:04 PM</span>
+	<span class='label end-time'>Jun 21, 2023 01:51:35 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 30s+843ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:13 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134913151.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134913151.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134913151.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:13 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:16 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134916083.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134916083.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134916083.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:16 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:16 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134916567.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134916567.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134916567.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:16 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:16 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134916979.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134916979.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134916979.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:16 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:19 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134919735.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134919735.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134919735.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:19 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:22 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134922557.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134922557.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134922557.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:22 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:25 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134925348.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134925348.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134925348.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:25 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:28 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134928181.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134928181.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134928181.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:28 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:30 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134930658.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134930658.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134930658.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:30 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:30 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134930950.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134930950.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134930950.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:30 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:33 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134933581.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134933581.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134933581.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:33 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:36 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134936198.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134936198.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134936198.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:36 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:38 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134938942.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134938942.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134938942.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:38 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:49:52 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134952346.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134952346.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023134952346.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:49:53 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:50:02 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135002571.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135002571.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135002571.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:50:02 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:50:31 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135031073.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135031073.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135031073.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:50:33 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:50:35 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135035605.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135035605.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135035605.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:50:35 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:51:35 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135135763.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135135763.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135135763.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:51:35 PM</td>
+					<td class='step-details'>Execution Pass</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='3'>
+					<div class='test-heading'>
+						<span class='test-name'>PXDOTONL||TS_CRS_004||To check whether system allows to create an Outbound Cross Border Payments Transaction Input with below mentioned conditions:
+Network Code SWIFT
+Network Code Description Cross Boarder
+Transfer Type as Customer Transfer
+Transfer Currency as GBP
+Debit Currency as JOD.
+
+Test Steps:
+--> To check whether system navigates to Outbound Cross Border Payments Transaction Input on entering function id of PXDOTONL.
+--> To check whether system allows the user to input all the mandatory field values under an Outbound Cross Border Payments Transaction Input screen.
+--> To check whether system allows an user to select the values for Source Code as MANL, Network Code as SWIFT and Transfer Type as Customer Transfer.
+--> To check whether system allows the user to input fields like Transfer Currency as GBP, Transfer Amount, Debit Account, Debit Currency as JOD, Charge Whom as SHA, Account(59:Ultimate Beneficiary), BIC / Name Address1(59:Ultimate Beneficiary) and Bank Identifier Code(57: Account With Institution).
+--> Click on Enrich.
+--> Under Pricing tab, Verify the pricing amount for charge / Tax applied .
+-->  To check whether system displays below Pricing Components under the Pricing tab as mentioned in scenario.
+FT_BRN_T_C_CHG
+FT_SWF_CLS_1_CHG
+FT_STD_CHG
+FT_FX_COM_CHG
+FT_SDT_COM_1_CHG.
+--> Click on Save Button.
+--> To check whether user will get the popup Information Message after click on Save Button.</span>
+						<span class='test-time'>Jun 21, 2023 01:51:35 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2023 01:51:35 PM</span>
+	<span class='label end-time'>Jun 21, 2023 01:54:00 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 24s+718ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:51:43 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135143923.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135143923.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135143923.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:51:44 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:51:47 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135146989.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135146989.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135146989.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:51:47 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:51:47 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135147384.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135147384.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135147384.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:51:47 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:51:47 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135147691.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135147691.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135147691.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:51:47 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:51:50 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135150211.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135150211.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135150211.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:51:50 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:51:52 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135152914.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135152914.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135152914.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:51:52 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:51:55 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135155576.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135155576.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135155576.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:51:55 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:51:58 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135158242.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135158242.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135158242.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:51:58 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:52:00 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135200608.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135200608.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135200608.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:52:00 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:52:00 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135200947.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135200947.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135200947.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:52:00 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:52:03 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135203643.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135203643.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135203643.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:52:03 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:52:06 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135206280.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135206280.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135206280.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:52:06 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:52:08 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135208939.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135208939.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135208939.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:52:08 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:52:22 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135222289.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135222289.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135222289.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:52:23 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:52:32 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135232274.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135232274.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135232274.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:52:32 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:53:00 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135300710.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135300710.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135300710.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:53:02 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:53:04 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135304083.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135304083.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135304083.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:53:04 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:00 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135400589.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135400589.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135400589.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:00 PM</td>
+					<td class='step-details'>Execution Pass</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='4'>
+					<div class='test-heading'>
+						<span class='test-name'>PXDOTONL||TS_CRS_005||To check whether system allows to create an Outbound Cross Border Payments Transaction Input with below mentioned conditions and modify the default pricing values under pricing tab:
+Network Code SWIFT
+Network Code Description Cross Boarder
+Transfer Type as Customer Transfer
+Transfer Currency as JOD
+Debit Currency as EUR.
+
+Test Steps:
+--> To check whether system navigates to Outbound Cross Border Payments Transaction Input on entering function id of PXDOTONL.
+--> To check whether system allows the user to input all the mandatory field values under an Outbound Cross Border Payments Transaction Input screen.
+--> To check whether system allows an user to select the values for Source Code as MANL, Network Code as SWIFT and Transfer Type as Customer Transfer.
+--> To check whether system allows the user to input fields like Transfer Currency as JOD, Transfer Amount, Debit Account, Debit Currency as EUR, Charge Whom as OUR, Account(59:Ultimate Beneficiary), BIC / Name Address1(59:Ultimate Beneficiary) and Bank Identifier Code(57: Account With Institution).
+--> Click on Enrich.
+--> Under Pricing tab, Verify the pricing amount for charge / Tax applied .
+-->  To check whether system displays below Pricing Components under the Pricing tab as mentioned in scenario.
+FT_BRN_T_C_CHG
+FT_SWF_CLS_1_CHG
+FT_BRN_O_C_CHG
+FT_STD_CHG
+FT_FX_COM_CHG
+FT_SDT_COM_1_CHG.
+--> To check whether system allows an user to modify the Pricing Amount.
+--> Click on Save Button.
+--> To check whether user will get the popup Information Message after click on Save Button.</span>
+						<span class='test-time'>Jun 21, 2023 01:54:00 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2023 01:54:00 PM</span>
+	<span class='label end-time'>Jun 21, 2023 01:55:38 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 38s+219ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:08 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135408739.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135408739.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135408739.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:09 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:12 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135412058.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135412058.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135412058.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:12 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:12 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135412499.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135412499.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135412499.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:12 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:12 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135412845.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135412845.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135412845.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:12 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:15 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135415786.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135415786.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135415786.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:15 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:18 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135418586.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135418586.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135418586.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:18 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:21 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135421586.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135421586.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135421586.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:21 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:24 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135424342.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135424342.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135424342.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:24 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:26 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135426732.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135426732.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135426732.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:26 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:27 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135427183.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135427183.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135427183.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:27 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:29 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135429886.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135429886.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135429886.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:29 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:32 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135432601.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135432601.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135432601.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:32 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:35 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135435272.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135435272.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135435272.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:35 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:48 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135448638.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135448638.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135448638.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:49 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:54:58 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135458419.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135458419.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135458419.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:54:58 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:55:38 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135538938.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135538938.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135538938.png'></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:55:38 PM</td>
+					<td class='step-details'>Execution failed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='5'>
+					<div class='test-heading'>
+						<span class='test-name'>PXDOTONL||TS_CRS_016||To check whether system allows to create an Outbound Cross Border Payments Transaction Input with below mentioned conditions:
+Network Code SWIFT
+Network Code Description Cross Boarder
+Transfer Type as Bank Transfer Own A/C
+Credit Account Currency as USD
+Debit Account Currency as USD.
+
+Test Steps:
+--> To check whether system navigates to Outbound Cross Border Payments Transaction Input on entering function id of PXDOTONL.
+--> To check whether system allows the user to input all the mandatory field values under an Outbound Cross Border Payments Transaction Input screen.
+--> To check whether system allows an user to select the values for Source Code as MANL, Network Code as SWIFT and Transfer Type as Bank Transfer Own A/C.
+--> To check whether system allows the user to like Transfer Currency as USD, Transfer Amount, Credit Account, Credit Account Currency as USD, Debit Account, Debit Account Currency as USD, Charge Whom, Bank Identifier Code(57: Account With Institution).
+--> Click on Enrich.
+--> Click on Save Button.
+--> To check whether user will get the popup Information Message after click on Save Button.</span>
+						<span class='test-time'>Jun 21, 2023 01:55:39 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2023 01:55:39 PM</span>
+	<span class='label end-time'>Jun 21, 2023 01:57:09 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 30s+624ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:55:47 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135547109.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135547109.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135547109.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:55:47 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:55:50 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135550146.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135550146.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135550146.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:55:50 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:55:50 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135550523.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135550523.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135550523.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:55:50 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:55:50 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135550839.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135550839.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135550839.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:55:50 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:55:53 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135553591.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135553591.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135553591.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:55:53 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:55:56 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135556422.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135556422.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135556422.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:55:56 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:55:59 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135559146.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135559146.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135559146.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:55:59 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:56:01 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135601895.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135601895.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135601895.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:56:01 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:56:04 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135604579.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135604579.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135604579.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:56:04 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:56:05 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135605404.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135605404.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135605404.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:56:05 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:56:05 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135605721.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135605721.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135605721.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:56:05 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:56:08 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135608364.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135608364.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135608364.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:56:08 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:56:25 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135625737.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135625737.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135625737.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:56:26 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:09 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135709678.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135709678.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135709678.png'></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:57:09 PM</td>
+					<td class='step-details'>Execution failed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  fail' status='fail' bdd='false' test-id='6'>
+					<div class='test-heading'>
+						<span class='test-name'>PXDOTONL||TS_CRS_018||To check whether system allows to create an Outbound Cross Border Payments Transaction Input with below mentioned conditions:
+Network Code SWIFT
+Network Code Description Cross Boarder
+Transfer Type as Bank Transfer Own A/C
+Credit Account Currency as GBP
+Debit Account Currency as GBP.
+
+Test Steps:
+--> To check whether system navigates to Outbound Cross Border Payments Transaction Input on entering function id of PXDOTONL.
+--> To check whether system allows the user to input all the mandatory field values under an Outbound Cross Border Payments Transaction Input screen.
+--> To check whether system allows an user to select the values for Source Code as MANL, Network Code as SWIFT and Transfer Type as Bank Transfer Own A/C.
+--> To check whether system allows the user to like Transfer Currency as GBP, Transfer Amount, Credit Account, Credit Account Currency as GBP, Debit Account, Debit Account Currency as GBP, Charge Whom, Bank Identifier Code(57: Account With Institution).
+--> Click on Enrich.
+--> Click on Save Button.
+--> To check whether user will get the popup Information Message after click on Save Button.</span>
+						<span class='test-time'>Jun 21, 2023 01:57:09 PM</span>
+						<span class='test-status right fail'>fail</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2023 01:57:09 PM</span>
+	<span class='label end-time'>Jun 21, 2023 01:58:43 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 1m 33s+383ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:18 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135718085.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135718085.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135718085.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:18 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:21 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135721260.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135721260.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135721260.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:21 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:24 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135724406.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135724406.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135724406.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:24 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:24 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135724715.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135724715.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135724715.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:24 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:27 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135727712.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135727712.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135727712.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:27 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:30 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135730444.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135730444.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135730444.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:30 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:33 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135733106.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135733106.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135733106.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:33 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:35 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135735917.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135735917.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135735917.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:35 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:38 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135738782.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135738782.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135738782.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:38 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:39 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135739143.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135739143.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135739143.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:39 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:39 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135739490.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135739490.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135739490.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:39 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:42 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135742035.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135742035.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135742035.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:42 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:57:59 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135759407.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135759407.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135759407.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:57:59 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:58:43 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135843150.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135843150.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023135843150.png'></td>
+				</tr>
+				<tr class='log' status='fail'>
+					<td class='status fail' title='fail' alt='fail'><i class='material-icons'>cancel</i></td>
+					<td class='timestamp'>1:58:43 PM</td>
+					<td class='step-details'>Execution failed</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+				
+				
+				<li class='test displayed active  pass' status='pass' bdd='false' test-id='7'>
+					<div class='test-heading'>
+						<span class='test-name'>PXDOTONL||TS_CRS_019||To check whether system allows to create an Outbound Cross Border Payments Transaction Input with below mentioned conditions:
+Network Code R201_1121
+Network Code Description Outgoing Customer Transfer
+Transfer Type as Customer Transfer.
+
+Test Steps:
+--> To check whether system navigates to Outbound Cross Border Payments Transaction Input on entering function id of PXDOTONL.
+--> To check whether system allows the user to input all the mandatory field values under an Outbound Cross Border Payments Transaction Input screen.
+--> To check whether system allows an user to select the values for Source Code as MANL, Network Code as R201_1121 and Transfer Type as Customer Transfer.
+--> To check whether system allows the user to input fields like Transfer Currency as JOD, Transfer Amount, Debit Account, Debit Currency as JOD, Charge Whom as OUR, Account(59:Ultimate Beneficiary), BIC / Name Address1(59:Ultimate Beneficiary) and Bank Identifier Code(57: Account With Institution).
+--> Click on Enrich.
+--> Under Pricing tab, Verify the pricing amount for charge / Tax applied.
+--> To check whether system displays below Pricing Components under the Pricing tab as mentioned in scenario.
+FT_BRN_T_C_CHG
+FT_SWF_CLS_1_CHG
+FT_BRN_O_C_CHG
+FT_STD_CHG
+FT_FX_COM_CHG
+FT_SDT_COM_1_CHG.
+--> To check whether system allows an user to modify the Pricing Amount and Check in Waived checkbox.
+-->  Click on Save Button.
+--> To check whether user will get the popup Information Message after click on Save Button.</span>
+						<span class='test-time'>Jun 21, 2023 01:58:43 PM</span>
+						<span class='test-status right pass'>pass</span>
+					</div>
+					<div class='test-content hide'>
+<div class='test-time-info'>
+	<span class='label start-time'>Jun 21, 2023 01:58:43 PM</span>
+	<span class='label end-time'>Jun 21, 2023 02:01:17 PM</span>
+	<span class='label time-taken grey lighten-1 white-text'>0h 2m 34s+283ms</span>
+</div>
+	<div class='test-steps'>
+		<table class='bordered table-results'>
+			<thead>
+				<tr>
+					<th>Status</th>
+					<th>Timestamp</th>
+					<th>Details</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:58:52 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135852566.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135852566.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135852566.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:58:52 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:58:55 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135855556.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135855556.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135855556.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:58:55 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:58:56 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135855950.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135855950.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135855950.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:58:56 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:58:56 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135856428.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135856428.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135856428.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:58:56 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:58:59 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135859051.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135859051.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135859051.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:58:59 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:02 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135902001.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135902001.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135902001.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:59:02 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:04 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135904734.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135904734.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135904734.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:59:04 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:08 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135907989.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135907989.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135907989.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:59:08 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:10 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135910399.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135910399.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135910399.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:59:10 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:10 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135910785.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135910785.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135910785.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:59:10 PM</td>
+					<td class='step-details'>Element Selected succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:13 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135913504.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135913504.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135913504.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:59:13 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:16 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135916234.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135916234.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135916234.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:59:16 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:18 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135918901.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135918901.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135918901.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:59:18 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:32 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135932281.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135932281.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135932281.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:59:33 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:42 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135942505.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135942505.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135942505.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:59:42 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:48 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135948166.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135948166.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135948166.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:59:48 PM</td>
+					<td class='step-details'>Value Captured succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>1:59:58 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135958526.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135958526.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023135958526.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>1:59:58 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:00:17 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023140017863.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023140017863.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023140017863.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:00:20 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:00:21 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023140021225.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023140021225.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssSeleniumAutomation06212023140021225.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:00:21 PM</td>
+					<td class='step-details'>Element click succesfully</td>
+				</tr>
+				<tr class='log' status='info'>
+					<td class='status info' title='info' alt='info'><i class='material-icons'>info_outline</i></td>
+					<td class='timestamp'>2:01:17 PM</td>
+					<td class='step-details'>Seleniumautomation<img data-featherlight='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023140117547.png' width='10%' src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023140117547.png' data-src='C:\\PaymentModule\\Screenshot\\PXDOTONL\\ssseleniumautomation06212023140117547.png'></td>
+				</tr>
+				<tr class='log' status='pass'>
+					<td class='status pass' title='pass' alt='pass'><i class='material-icons'>check_circle</i></td>
+					<td class='timestamp'>2:01:17 PM</td>
+					<td class='step-details'>Execution Pass</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- subview left -->
+
+	<div class='subview-right left'>
+		<div class='view-summary'>
+			<h5 class='test-name'></h5>
+
+			<div id='step-filters' class="right">
+				<span class="blue-text" status="info" alt="info" title="info"><i class="material-icons">info_outline</i></span>
+				<span class="green-text" status="pass" alt="pass" title="pass"><i class="material-icons">check_circle</i></span>
+				<span class="red-text" status="fail" alt="fail" title="fail"><i class="material-icons">cancel</i></span>
+				<span class="red-text text-darken-4" status="fatal" alt="fatal" title="fatal"><i class="material-icons">cancel</i></span>
+				<span class="pink-text text-lighten-1" status="error" alt="error" title="error"><i class="material-icons">error</i></span>
+				<span class="orange-text" alt="warning" status="warning" title="warning"><i class="material-icons">warning</i></span>
+				<span class="teal-text" status="skip" alt="skip" title="skip"><i class="material-icons">redo</i></span>
+				<span status="clear" alt="Clear filters" title="Clear filters"><i class="material-icons">clear</i></span>
+			</div>
+		</div>
+	</div>
+	<!-- subview right -->
+
+</div>
+<!-- test view -->
+<!-- category view -->
+<!-- exception view -->
+<div id='dashboard-view' class='view hide'>
+	<div class='card-panel transparent np-v'>
+		<h5>Dashboard</h5>
+
+		<div class='row'>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Tests
+					<div class='panel-lead'>7</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Steps
+					<div class='panel-lead'>236</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Start
+					<div class='panel-lead'>Jun 21, 2023 01:46:29 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+			 		End
+			 		<div class='panel-lead'>Jun 21, 2023 02:01:17 PM</div>
+				</div>
+			</div>
+			<div class='col s2'>
+				<div class='card-panel r'>
+					Time Taken
+					<div class='panel-lead'>0h 14m 47s+697ms</div>
+				</div>
+			</div>
+			<div class='col s4'>
+				<div class='card-panel dashboard-environment'>
+					<span class='right label cyan white-text'>Environment</span><p>&nbsp;</p>
+					
+					<table>
+						<tr>
+							<th>Name</th>
+							<th>Value</th>
+						</tr>
+							<tr>
+								<td>Environment</td>
+								<td>AutomationTesting</td>
+							</tr>
+							<tr>
+								<td>HostAddress</td>
+								<td>Google</td>
+							</tr>
+							<tr>
+								<td>Browser</td>
+								<td>GoogleChrome</td>
+							</tr>
+							<tr>
+								<td>Application_URL</td>
+								<td>automation</td>
+							</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- dashboard view -->
+<!-- testrunner-logs view -->
+		</div>
+		<!-- container -->
+
+		<script>
+			var statusGroup = {
+				passParent: 4,
+				failParent: 3,
+				fatalParent: 0,
+				errorParent: 0,
+				warningParent: 0,
+				skipParent: 0,
+				exceptionsParent: 3,
+				
+				passChild: 115,
+				failChild: 3,
+				fatalChild: 0,
+				errorChild: 0,
+				warningChild: 0,
+				skipChild: 0,
+				infoChild: 118,
+				exceptionsChild: 3,
+				
+				passGrandChild: 0,
+				failGrandChild: 0,
+				fatalGrandChild: 0,
+				errorGrandChild: 0,
+				warningGrandChild: 0,
+				skipGrandChild: 0,
+				infoGrandChild: 0,
+				exceptionsGrandChild: 0,
+			};
+		</script>
+		
+			<script src='https://cdn.rawgit.com/anshooarora/extentreports-java/fca20fb7653aade98810546ab96a2a4360e3e712/dist/js/extent.js' type='text/javascript'></script>
+		
+		
+ 		<script type='text/javascript'>
+ 		</script>
+	</body>
+	
+</html>

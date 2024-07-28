@@ -1,0 +1,208 @@
+{
+  "Excelpath" : "C:/OBPAutomation/Templates/ExcelSheets/BookTransfer_val.xlsx",
+  "Sheet" : "PBDOTONL_UDF",
+  "Screenname" : "Book Transfer Transaction Input "
+
+"PBDOTONL" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PBDOTONL"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "New",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='New']"
+	},
+
+	{
+	 "name" : "SourceCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BOOK_TXN__SOURCE_CODE']"
+	},
+
+	{
+	 "name" : "NetworkCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BOOK_TXN__NETWORK_CODE']"
+	},
+
+	{
+	 "name" : "DebtorAccount(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BOOK_TXN__DR_AC_NO']"
+	},
+	
+	{
+	 "name" : "CreditorAccount(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BOOK_TXN__CR_AC_NO']"
+	},
+
+	{
+	 "name" : "CreditCurrency",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_BOOK_TXN__CR_AC_CCY']"
+	}
+
+	{
+	 "name" : "CreditAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BOOK_TXN__CR_AMTI']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Enrich",
+   	 "action" : "clickjs",
+    	 "Locator" : "//button[@id='BLK_BOOK_TXN__ENRICH']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Pricing",
+	 "action" : "clickjs",
+	 "Locator" : ".//span[text()='Pricing']"
+	},
+	
+	{
+	 "name" : "PricingAmountFT_FX_COM",
+	 "action" : "sendkeys",
+	 "Locator" : "//input[@id='BLK_BOOK_TXN_CHG__AMOUNTI']"
+	},
+	
+	{
+	 "name" : "WaivedFT_FX_COM",
+	 "action" : "clickjs",
+	 "Locator" : ".//input[@id='BLK_BOOK_TXN_CHG__WAIVER']"
+	},
+
+	{
+	 "name" : "PricingAmountFT_STD_CHG",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_BOOK_TXN_CHG__AMOUNTIRC1']"
+	},
+	
+	{
+	 "name" : "WaivedFT_STD_CHG",
+	 "action" : "clickjs",
+	 "Locator" : ".//input[@id='BLK_BOOK_TXN_CHG__WAIVERRC1']"
+	},
+
+	{
+	 "name" : "PricingAmountFT_AA_OCM",
+	 "action" : "sendkeys",
+	 "Locator" : "//input[@id='BLK_BOOK_TXN_CHG__AMOUNTI']"
+	},
+	
+	{
+	 "name" : "WaivedFT_AA_OCM",
+	 "action" : "clickjs",
+	 "Locator" : ".//input[@id='BLK_BOOK_TXN_CHG__WAIVER']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "UDF",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[text()='UDF']"
+	},
+
+	{
+	 "action" : "switchframe"
+	},
+	
+	{
+	 "name" : "FieldValue",
+	 "action" : "sendkeys",
+	 "Locator" : "//input[@id='BLK_TXN_UDF_DET__FIELD_VALUE']"
+	},
+
+	{
+	 "name" : "CloseSubScreen",
+   	 "action" : "CloseChildSubScreen",
+	},
+
+	{
+	 "action" : "wait"
+	},
+	
+	{
+	 "name" : "Save",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Save']"
+	},
+	
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "name" : "TransactionReferenceNumber",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_BOOK_TXN__TXN_REF_NOI']"
+	},
+
+	{		
+	 "name"  : "ValidateBookingDate",
+	 "name1" : "BookingDateStatus",
+	 "name2" : "OverallStatus",
+	 "action" : "BookingDateValidate",
+	 "Locator" : "//input[@id='BLK_BOOK_TXN__TXN_BOOKING_DATEI']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountFT_FX_COM",
+	 "name1" : "PricingAmountFT_FX_COMStatus",
+	 "name2" : "OverallStatus",
+	 "action" : "ValidatePricingAmountFT_FX_COM",
+	 "Locator" : ".//input[@id='BLK_BOOK_TXN_CHG__AMOUNTI']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountFT_STD_CHG",
+	 "name1" : "PricingAmountStatusFT_STD_CHG",
+	 "name2" : "OverallStatus",
+	 "action" : "ValidatePricingAmountFT_STD_CHG",
+	 "Locator" : ".//input[@id='BLK_BOOK_TXN_CHG__AMOUNTIRC1']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountFT_AA_OCM",
+	 "name1" : "PricingAmountStatusFT_AA_OCM",
+	 "name2" : "OverallStatus",
+	 "action" : "ValidatePricingAmountFT_AA_OCM",
+	 "Locator" : ".//input[@id='BLK_BOOK_TXN_CHG__AMOUNTI']"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"
+	}
+
+]
+}

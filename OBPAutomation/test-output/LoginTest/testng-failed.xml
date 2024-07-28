@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [LoginTest]" guice-stage="DEVELOPMENT">
+  <test name="Test1 Testcase in firefox(failed)">
+    <classes>
+      <class name="com.profinch.obp.ProfinchSeleniumOBP">
+        <methods>
+          <include name="setup"/>
+          <include name="AutomationModule"/>
+        </methods>
+      </class> <!-- com.profinch.obp.ProfinchSeleniumOBP -->
+    </classes>
+  </test> <!-- Test1 Testcase in firefox(failed) -->
+</suite> <!-- Failed suite [LoginTest] -->

@@ -1,0 +1,285 @@
+{
+
+     "Sheet" : "ACCOUNT_STRUCTURE",
+	"AccountStructure" :
+    [
+               
+          
+        {
+        "name" : "ORACLE_BANKING",
+        "action" : "clickjs",
+        "Locator" : "[href*='oraclebankingliquiditymanagementsystem']"
+        },
+       
+        {
+        "name" : "STRUCTURE",
+        "action" : "clickjs",
+        "Locator" : "//span[text()='Structure']"
+        },
+
+		{
+        "name" : "ACCOUNT_STRUCTURE",
+        "action" : "clickjs",
+        "Locator" : "//span[text()='Account Structure']"
+        },
+		
+		{
+        "name" : "ADD_STRUCTURE",
+        "action" : "clickjs",
+        "Locator" : "button>div>span[class*='summary-add-btn']"
+		
+        },
+		
+        {
+        "name" : "CUSTOMER_ID",
+        "action" : "sendkeys",
+        "Locator" : "input[id*='_ojcustomelem'][aria-label*='Customer']"
+        },
+
+		{
+        "name" : "STRUCTURE_DESCRIPTION",
+        "action" : "sendkeys",
+        "Locator" : "[name*='structureDescription'] input[id*='structureDesc']"
+        },	
+
+		{
+        "name" : "STRUTURE_TYPE",
+        "action" : "dropdown",
+        "Locator" : "[name*='structureType'] input",
+        "Locator1" : "[id*='structureType'] li span"
+        },
+
+		{
+        "name" : "INTEREST_METHOD",
+        "action" : "dropdown",
+        "Locator" : "[id*='interestMethod'] div:nth-child(3) input",
+        "Locator1" : "[id*='structureType'] li span"
+        },
+
+		{
+        "name" : "INVESTMENT_SWEEP",
+        "action" : "dropdown",
+        "Locator" : "[id*='investmentSweep'] div:nth-child(3) input",
+        "Locator1" : "[id*='structureType'] li span"
+        },
+
+		{
+        "name" : "FXRATE_PICKUP",
+        "action" : "dropdown",
+        "Locator" : "[id*='fxRatePickup'] div:nth-child(3) input",
+        "Locator1" : "[id*='structureType'] li span"
+        },
+
+		{
+        "name" : "EFFECTIVE_DATE",
+        "action" : "sendkeys",
+        "Locator" : "#effectiveDate input"
+        },	
+
+		{
+        "name" : "END_DATE",
+        "action" : "sendkeys",
+        "Locator" : "#endDate input"
+        },
+
+		{
+        "name" : "INSTRUCTION_ID",
+        "action" : "sendkeys",
+        "Locator" : "input[id*='_ojcustomelem'][aria-label*='Instruction ID']"
+        },	
+
+		{
+        "name" : "DEFAULT_FREQUENCY",
+        "action" : "sendkeys",
+        "Locator" : "#structureFrequency input[aria-label*='Frequency ID']"
+        },
+
+		{
+        "name" : "REVERSE_FREQUENCY",
+        "action" : "sendkeys",
+        "Locator" : "#reverseFrequency input[aria-label*='Frequency ID']"
+        },
+
+		{
+        "name" : "REALLOCATION_METHOD",
+        "action" : "sendkeys",
+        "Locator" : "[id*='reallocationMethod'] div:nth-child(3) input"
+        },
+
+		{
+        "name" : "CENTRAL_ACCOUNT_NUMBER",
+        "action" : "sendkeys",
+        "Locator" : "[id*='_ojcustomelem'] [aria-label*='Account Number']"
+        },
+
+		{
+        "name" : "SWEEP_ON_HOLIDAYS",
+        "action" : "clickjs",
+        "Locator" : "[id*='allowSweepOnCurrencyHol'] div:nth-child(2)"
+        },	
+
+		{
+        "name" : "CONSDIER_POSTSWEEP_BALANCE",
+        "action" : "clickjs",
+        "Locator" : "[id*='considerPostSweepBalance'] div:nth-child(2)"
+        },	
+
+		{
+        "name" : "CURRENCY_HOLIDAYRATE",
+        "action" : "dropdown",
+        "Locator" : "[id*='oj-searchselect-input-ratePickUp']",
+        "Locator1" : "[id*='structureType'] li span"
+        },	
+
+		{
+        "name" : "RATE_TYPE",
+        "action" : "dropdown",
+        "Locator" : "[id*='currencyRateType']>div:nth-child(1) input",
+        "Locator1" : "[id*='structureType'] li span"
+        },		
+		
+		{
+        "name" : "HOLIDAY_TREATMENT",
+        "action" : "dropdown",
+        "Locator" : "[id*='holidayTreatment']>div:nth-child(1) input",
+        "Locator1" : "[id*='structureType'] li span"
+        },
+		
+		{
+        "name" : "CENTRAL_ACCOUNT_NUMBER",
+        "action" : "sendkeys",
+        "Locator" : "[id*='_ojcustomelem'] [aria-label*='Account Number']"
+        },
+		
+		{
+        "name" : "BACKWARD_TREATMENT",
+        "action" : "dropdown",
+        "Locator" : "[id*='backwardTreatment']>div:nth-child(1) input",
+        "Locator1" : "[id*='structureType'] li span"
+        },
+		
+		{
+        "name" : "STRUTURE_PRIORITY",
+        "action" : "sendkeys",
+        "Locator" : "[id*='strPriority']>div:nth-child(1) input"
+        },
+		
+		{
+        "name" : "PAUSE_START_DATE",
+        "action" : "sendkeys",
+        "Locator" : "#pauseStartDate input"
+        },
+		
+		{
+        "name" : "PAUSE_END_DATE",
+        "action" : "sendkeys",
+        "Locator" : "#pauseEndDate input"
+        },
+		
+		{
+        "name" : "CROSS_CURRENCY",
+        "action" : "clickjs",
+        "Locator" : "[id*='crossCurrencyFlag'] div:nth-child(2)"
+        },
+		
+		{
+        "name" : "CROSS_BORDER",
+        "action" : "clickjs",
+        "Locator" : "[id*='crossBorderFlag'] div:nth-child(2)"
+        },
+		
+		{
+        "name" : "MULTI_BANK_CASH",
+        "action" : "clickjs",
+        "Locator" : "[id*='multiBankFlag'] div:nth-child(2)"
+        }
+
+		
+		],
+		
+		
+		"Authorise" :
+        [
+        
+        {
+        "name" : "LogintoAuthorise",
+        "action" : "SecondUrAuthorise",
+        "Locator" : "//span[@id='profileLauncher']",
+        "Locator1" : "//span[contains(text(),'Logout')]"
+        },
+        
+        {
+        "action" : "wait"
+        },
+		
+		{
+        "name" : "Search_Viewer",
+        "action" : "scroll",
+        "Locator" : "(//span[text()='Viewer']//following::span)[1]"
+        },
+		
+		{
+        "name" : "Approver",
+        "action" : "dropdown",
+        "Locator" : "(//span[text()='Viewer']//following::span)[1]",
+        "Locator1" : "//oj-menu[@id='viewMenu'][1]"
+        },
+		
+       
+        {
+        "name" : "BulkFile",
+        "action" : "clickjs",
+        "Locator" : "(//a[@title='Click here for Bulk File'])[1]"
+        }, 
+        
+				
+		{
+        "name" : "ReferenceNumber",
+        "action" : "dependencyclick"
+        },
+		
+		{
+        "name" : "FirstApprove",
+        "action" : "clickjs",
+        "Locator" : "(//span[text()='Approve'])[1]"
+        },
+		
+		
+        {
+        "action" : "wait"
+        },
+
+
+ 
+		{
+        "name" : "ConfirmApprove",
+        "action" : "clickjs",
+        "Locator" : "(//span[text()='Approve'])[2]"
+        },
+        
+        {
+        "name" : "Reject",
+        "action" : "clickjs",
+        "Locator" : "(//span[text()='Reject'])[1]"
+        },
+
+ 
+
+        {
+        "name" : "RejectConfirm",
+        "action" : "clickjs",
+        "Locator" : "(//span[text()='Reject'])[2]"
+        }
+		
+        ],
+		
+		"LoginLogout" :
+		[
+		{
+		"name" : "CloseBrowser",
+		"action" : "signout"
+		}
+		
+		]
+        
+        }

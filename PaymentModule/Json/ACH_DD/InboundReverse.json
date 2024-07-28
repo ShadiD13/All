@@ -1,0 +1,132 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/ACH DD.xlsx",
+  "Sheet" : "InboundReverse",
+  "Screenname" : "View ACH Debit Receipts Summary "
+
+"PZSIVIEW" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PZSIVIEW"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "TransactionIdentification",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_ACH_DD_IN_TXN__TXN_REF_NO']"
+	},
+
+	{
+	 "name" : "Search",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Search']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "CheckBox1",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='RSLT_CHKBOX0']"
+	},
+
+	{
+	 "name" : "ProcessReversal",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[@id='BTN_REVERSE']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Originated ACH DD Reversal Input')]" 
+	},
+
+	{
+	 "name" : "SourceCode",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_BRN_ACH_DD_IN_RVCN_TXN__SOURCE_CODE']"
+	},
+
+	{
+	 "name" : "ReasonCode",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_BRN_ACH_DD_IN_RVCN_TXN__REV_CNC_CD']"
+	},
+
+	{
+	 "name" : "Enrich",
+	 "action" : "clickjs",
+	 "Locator" : ".//button[@id='BLK_BRN_ACH_DD_IN_RVCN_TXN__BTN_ENRICH']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[text()='Save']"
+	},
+
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Originated ACH DD Reversal Input')]"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "ReversalReference",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_BRN_ACH_DD_IN_RVCN_TXN__REV_CNC_REF_NOI']"
+	},
+
+	{
+	 "name" : "Exit1",
+	 "action" : "Exitscreen"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	  "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'View ACH Debit Receipts Summary')]"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "clickjs",
+	 "Locator" : ".//input[@id='BTN_EXIT']"
+	}
+
+]
+}

@@ -1,0 +1,96 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/CrossBorder.xlsx",
+  "Sheet" : "InboundCancel",
+  "Screenname" : "Inbound Cross Border Payments View Summary "
+
+"PXSIVIEW" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PXSIVIEW"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "TransactionReferenceNumber",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_PXVWS_IN_TXN_SUMMARY__TXN_REF_NOI']"
+	},
+
+	{
+	 "name" : "Search",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Search']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "CheckBox1",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='RSLT_CHKBOX0']"
+	},
+
+	{
+	 "name" : "CancelRequest",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[@id='BTN_CANCEL_REQUEST']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Inbound Cross Border Cancellation Request Detailed')]"
+	},
+
+	{
+	 "name" : "Remarks",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_IN_TXN_CANC_REQ_MASTER__REMARKS']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[text()='Save']"
+	},
+
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	  "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Inbound Cross Border Payments View Summary')]"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "clickjs",
+	 "Locator" : ".//input[@id='BTN_EXIT']"
+	}
+
+]
+}

@@ -1,0 +1,199 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/CrossBorder.xlsx",
+  "Sheet" : "PXDITONL_CustomerTransfer_Our",
+  "Screenname" : "Inbound Cross Border Payments Transaction Input "
+
+"PXDITONL" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PXDITONL"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "New",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='New']"
+	},
+
+	{
+	 "name" : "SourceCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_IN_TXN__SOURCE_CODE']"
+	},
+
+	{
+	 "name" : "SourceReferenceNumber",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_IN_TXN__EXTERNAL_REF_NO']"
+	},
+
+	{
+	 "name" : "TransferType",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_BRN_PX_IN_TXN__TRANSFER_TYPE']"
+	},
+
+	{
+	 "name" : "NetworkCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_IN_TXN__NETWORK']"
+	},
+
+	{
+	 "name" : "InstructionDate",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_IN_TXN__INSTRUCTION_DATEI']"
+	},
+
+	{
+	 "name" : "TransferCurrency",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_IN_TXN__TXN_CCY']"
+	},
+
+	{
+	 "name" : "TransferAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_IN_TXN__TXN_AMOUNTI']"
+	},
+
+	{
+	 "name" : "CreditAccount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_IN_TXN__CR_AC_NO']"
+	},
+
+	{
+	 "name" : "SenderBIC",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_IN_TXN__SENDER_BANK']"
+	},
+
+	{
+	 "name" : "PartyIdentifier(50:OrderingCustomer)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_IN_TXN__ORDERING_CUSTOMER1']"
+	},
+
+	{
+	 "name" : "BIC/NameandAddress1(50:OrderingCustomer)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_IN_TXN__ORDERING_CUSTOMER2']"
+	},
+
+	{
+	 "name" : "Account(59:UltimateBeneficiary)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_IN_TXN__BENEFICIARY1']"
+	},
+
+	{
+	 "name" : "BIC/NameandAddress1(59:UltimateBeneficiary)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_IN_TXN__BENEFICIARY2']"
+	},
+	
+	{
+	 "name" : "ChargeWhom",
+   	 "action" : "dropdown",
+    	 "Locator" : "//select[@id='BLK_BRN_PX_IN_TXN__CHARGE_WHOM']"
+	},
+
+	{
+	 "name" : "Enrich",
+   	 "action" : "clickjs",
+    	 "Locator" : "//button[@id='BLK_BRN_PX_IN_TXN__BTN_ENRICH']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Pricing",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//span[text()='Pricing']"
+	},
+
+	{
+	 "name" : "PricingAmountFT_SWF_CLS",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_IN_TXN_CHG__AMOUNTI']"
+	},
+
+	{
+	 "name" : "WaivedFT_SWF_CLS",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_IN_TXN_CHG__WAIVER']"
+	},
+
+	{
+	 "name" : "PricingAmountFT_INCINT",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_IN_TXN_CHG__AMOUNTIRC1']"
+	},
+
+	{
+	 "name" : "WaivedFT_INCINT",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_IN_TXN_CHG__WAIVERRC1']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Save']"
+	},
+	
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "name" : "TransactionReferenceNumber",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_IN_TXN__TXN_REF_NOI']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountFT_SWF_CLS_R115",
+	 "name1" : "PricingAmountStatusFT_SWF_CLS_R115",
+	 "name2" : "OverallStatus",
+	 "action" : "PricingAmountFT_SWF_CLS(PXI)",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_IN_TXN_CHG__AMOUNTI']"
+	},	
+
+	{		
+	 "name"  : "ValidatePricingAmountFT_INCINT",
+	 "name1" : "PricingAmountStatusFT_INCINT",
+	 "name2" : "OverallStatus",
+	 "action" : "PricingAmountFT_INCINT",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_IN_TXN_CHG__AMOUNTIRC1']"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"	
+	}
+]
+
+}

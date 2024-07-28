@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <!--Test Screen Shots-->
+    <entry key="ScreenShotFolder">C:\\chromedriver\\Screenshot\\Report\\ss</entry>
+    <!--Logger-->
+    <entry key="LoggerFolder">.\\ClientWorkspace\testsuite\log</entry>
+    <!--.XLSM TestData Details-->
+    <entry key="Path_TestData">.\\src\\main\\java\\datamanager\\loginData.xlsx</entry>
+    <!--.XLSM Report-->
+    <entry key="Path_ExtentReport">.\\proFInflow\\reports</entry>
+    <entry key="chromepath">.\\Resources\\Drivers\\chromedriver.exe</entry>
+    <!--Driver Extension-->
+    <entry key="internetexppath">.\\Resources\\Drivers\\IEDriverServer.exe</entry>
+    <entry key="firefoxpath">.\\Resources\\Drivers\\geckodriver.exe</entry>
+    <entry key="AllRecordQuery">select * from %s where Runmode='Yes'</entry>
+	<entry key="jsonfiles">.\\jsonfile\\TransferMoney.json</entry>
+    <entry key="TestYouModule">MyAccount</entry>
+</properties>

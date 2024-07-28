@@ -1,0 +1,83 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/CrossBorder.xlsx",
+  "Sheet" : "PXDCMN98",
+  "Screenname" : "Proprietary Message "
+
+"PXDCMN98" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PXDCMN98"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "New",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='New']"
+	},
+
+	{
+	 "name" : "Receiver",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_MSGOUT_N98__RECEIVER']"
+	},
+
+	{
+	 "name" : "SWIFTMessageType",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_MSGOUT_N98__SWIFT_MSG_TYPE']"
+	},
+
+	{
+	 "name" : "SubMessageType(12)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_MSGOUT_N98__TAG12_SUB_MSG_TYPEI']"
+	},
+
+	{
+	 "name" : "Narrative(77E)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//textarea[@id='BLK_MSGOUT_N98__TAG77E_TEXT1']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Save']"
+	},
+	
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "name" : "ReferenceNumber",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_MSGOUT_N98__REFERENCE_NO']"
+	},	
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"	
+	}
+]
+
+}

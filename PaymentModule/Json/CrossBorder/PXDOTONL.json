@@ -1,0 +1,321 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/CrossBorder.xlsx",
+  "Sheet" : "PXDOTONL",
+  "Screenname" : "Outbound Cross Border Payments Transaction Input "
+
+"PXDOTONL" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PXDOTONL"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "New",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='New']"
+	},
+
+	{
+	 "name" : "SourceCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__SOURCE_CODE']"
+	},
+
+	{
+	 "name" : "TransferType",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_BRN_PX_OUT_TXN__TRANSFER_TYPE']"
+	},
+
+	{
+	 "name" : "NetworkCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__NETWORK']"
+	},
+
+	{
+	 "name" : "TransferCurrency",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__TXN_CCY']"
+	},
+
+	{
+	 "name" : "TransferAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__TXN_AMOUNTI']"
+	},
+
+	{
+	 "name" : "DebitAccount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__DR_AC_NO']"
+	},
+
+	{
+	 "name" : "CreditAccount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__CR_AC_NO']"
+	},
+
+	{
+	 "name" : "ChargeWhom",
+   	 "action" : "dropdown",
+    	 "Locator" : "//select[@id='BLK_BRN_PX_OUT_TXN__CHARGE_WHOM']"
+	},
+
+	{
+	 "name" : "BankIdentifierCode(57:AccountWithInstitution)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN__ACC_WITH_INST2_CODE']"
+	},
+
+	{
+	 "name" : "Account(59:UltimateBeneficiary)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__BENEFICIARY1']"
+	},
+	
+	{
+	 "name" : "BIC/NameAddress1(59:Ultimate Beneficiary)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__BENEFICIARY2']"
+	},	
+
+	{
+	 "name" : "PartyIdentifier(58:BeneficaryInstitution)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__BENEFICIARY_INST1']"
+	},
+
+	{
+	 "name" : "BIC/NameAddress1(58:BeneficaryInstitution)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__BENEFICIARY_INST2']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Enrich",
+   	 "action" : "clickjs",
+    	 "Locator" : "//button[@id='BLK_BRN_PX_OUT_TXN__BTN_ENRICH']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Pricing",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//span[text()='Pricing']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "PricingAmountFT_FX_COM",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTI']"
+	},
+
+	{
+	 "name" : "WaivedFT_FX_COM",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__WAIVER']"
+	},
+
+	{
+	 "name" : "PricingAmountFT_SWF_CLS",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC1']"
+	},
+
+	{
+	 "name" : "WaivedFT_SWF_CLS",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__WAIVERRC1']"
+	},
+
+	{
+	 "name" : "PricingAmountFT_SDT_COM",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC2']"
+	},
+
+	{
+	 "name" : "WaivedFT_SDT_COM",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__WAIVERRC2']"
+	},
+
+	{
+	 "name" : "PricingAmountFT_BRN_O_C",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC3']"
+	},
+
+	{
+	 "name" : "WaivedFT_BRN_O_C",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__WAIVERRC3']"
+	},
+
+	{
+	 "name" : "PricingAmountFT_STD_CHG",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC4']"
+	},
+
+	{
+	 "name" : "WaivedFT_STD_CHG",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__WAIVERRC4']"
+	},
+
+	{
+	 "name" : "PricingAmountFT_BRN_T_C",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC5']"
+	},
+
+	{
+	 "name" : "WaivedFT_BRN_T_C",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__WAIVERRC5']"
+	},
+	
+	{
+	 "name" : "SHAPricingAmountFT_STD_CHG",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC3']"
+	},
+
+	{
+	 "name" : "SHAWaivedFT_STD_CHG",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__WAIVERRC3']"
+	},
+
+	{
+	 "name" : "SHAPricingAmountFT_BRN_T_C",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC4']"
+	},
+
+	{
+	 "name" : "SHAWaivedFT_BRN_T_C",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__WAIVERRC4']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Save']"
+	},
+	
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "name" : "TransactionReferenceNumber",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN__TXN_REF_NOI']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountFT_FX_COM",
+	 "name1" : "PricingAmountStatusFT_FX_COM",
+	 "name2" : "OverallStatus",
+	 "action" : "PricingAmountFT_FX_COM",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTI']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountFT_SWF_CLS",
+	 "name1" : "PricingAmountStatusFT_SWF_CLS",
+	 "name2" : "OverallStatus",
+	 "action" : "PricingAmountFT_SWF_CLS",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC1']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountFT_SDT_COM",
+	 "name1" : "PricingAmountStatusFT_SDT_COM",
+	 "name2" : "OverallStatus",
+	 "action" : "PricingAmountFT_SDT_COM",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC2']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountFT_BRN_O_C",
+	 "name1" : "PricingAmountStatusFT_BRN_O_C",
+	 "name2" : "OverallStatus",
+	 "action" : "PricingAmountFT_BRN_O_C",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC3']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountFT_STD_CHG",
+	 "name1" : "PricingAmountStatusFT_STD_CHG",
+	 "name2" : "OverallStatus",
+	 "action" : "PricingAmountFT_STD_CHG",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC4']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountFT_BRN_T_C",
+	 "name1" : "PricingAmountStatusFT_BRN_T_C",
+	 "name2" : "OverallStatus",
+	 "action" : "PricingAmountFT_BRN_T_C",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC5']"
+	},
+
+	{		
+	 "name"  : "SHAValidatePricingAmountFT_STD_CHG",
+	 "name1" : "SHAPricingAmountStatusFT_STD_CHG",
+	 "name2" : "OverallStatus",
+	 "action" : "SHAPricingAmountFT_STD_CHG",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC3']"
+	},
+
+	{		
+	 "name"  : "SHAValidatePricingAmountFT_BRN_T_C",
+	 "name1" : "SHAPricingAmountStatusFT_BRN_T_C",
+	 "name2" : "OverallStatus",
+	 "action" : "SHAPricingAmountFT_BRN_T_C",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTIRC4']"
+	},	
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"	
+	}
+]
+
+}

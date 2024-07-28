@@ -1,0 +1,59 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/ACH CT.xlsx",
+  "Sheet" : "PYDIVIEW",
+  "Screenname" : "View ACH Credit Transfer Receipts "
+
+"PYDIVIEW" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PYDIVIEW"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "EnterQuery",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Enter Query']"
+	},
+
+	{
+	 "name" : "TransactionIdentification",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_ACH_CT_IN_TXN__TXN_REF_NO']"
+	},
+
+	{
+	 "name" : "ExecuteQuery",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Execute Query']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "AccountingEntries",
+	 "action" : "accountingEntries"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"
+	}
+
+]
+}

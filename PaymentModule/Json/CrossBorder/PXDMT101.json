@@ -1,0 +1,218 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/CrossBorder.xlsx",
+  "Sheet" : "PXDMT101",
+  "Screenname" : "Outbound Cross Border MT101 Transaction Input "
+
+"PXDMT101" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PXDMT101"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "New",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='New']"
+	},
+
+	{
+	 "name" : "CustomerNumber",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101__CUSTOMER_NO']"
+	},
+
+	{
+	 "name" : "Receiver",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101__RECEIVER']"
+	},
+
+	{
+	 "name" : "SourceCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101__SOURCE_CODE']"
+	},
+
+	{
+	 "name" : "RequestedExecutionDate",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101__TAG30I']"
+	},
+
+	{
+	 "name" : "MessageIndex/Total1",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101__TAG28D_MSGINXI']"
+	},
+
+	{
+	 "name" : "MessageIndex/Total2",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101__TAG28D_MSGTOTI']"
+	},
+
+	{
+	 "name" : "BankIdentifierCode(50:InstructingParty)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101__TAG50_C']"
+	},
+
+	{
+	 "name" : "BankIdentifierCode(52:AccountServicingInstitution)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101__TAG52_ASI_BIC']"
+	},
+
+	{
+	 "name" : "TagOption(50:OrderingCustomer)",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_MSG_OUT101__TAG50_ORD_OPT']"
+	},
+
+	{
+	 "name" : "AccountNumber(50:OrderingCustomer)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101__TAG50_ORD_ACC']"
+	},
+
+	{
+	 "name" : "BankIdentifierCode(50:OrderingCustomer)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101__TAG50_ORD_BIC']"
+	},
+
+	{
+	 "name" : "Address(50:OrderingCustomer)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101__TAG50_ORD_ADD1']"
+	},
+
+	{
+	 "name" : "AddRow",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//button[@id='cmdAddRow_BLK_MSG_OUT101_DETAIL']"
+	},
+
+	{
+	 "name" : "F/XDealReference",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101_DETAIL__TAG21F']"
+	},
+
+	{
+	 "name" : "TransactionCurrency",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101_DETAIL__TAG32B_CCY']"
+	},
+
+	{
+	 "name" : "TransactionAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_MSG_OUT101_DETAIL__TAG32B_AMOUNTI']"
+	},
+
+	{
+	 "name" : "ExchangeRate",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_MSG_OUT101_DETAIL__TAG36I']"
+	},
+
+	{
+	 "name" : "OrderedCurrency",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_MSG_OUT101_DETAIL__TAG33B_CCY']"
+	},
+
+	{
+	 "name" : "OrderedAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_MSG_OUT101_DETAIL__TAG33B_AMOUNTI']"
+	},
+
+	{
+	 "name" : "OtherDetails",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//button[@id='BLK_MSG_OUT101_DETAIL__BTN_OTHER_DETAILS']"
+	},
+
+	{
+	 "action" : "switchframe"
+	},
+
+	{
+	 "name" : "DetailsOfCharge(71A)",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_MSG_OUT101_DETAIL__TAG71A']"
+	},
+
+	{
+	 "name" : "BankIdentifierCode(57:AccountWithInstitution)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101_DETAIL__TAG57_AWI_BIC']"
+	},
+
+	{
+	 "name" : "AccountNumber(59:Beneficiary)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101_DETAIL__TAG59_ACC']"
+	},
+
+	{
+	 "name" : "NameandAddress(59:Beneficiary)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_MSG_OUT101_DETAIL__TAG59_ADD1']"
+	},
+	
+	{
+	 "name" : "closesubscreen",
+   	 "action" : "CloseChildSubScreen",
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Save']"
+	},
+	
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "name" : "TransactionReference",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_MSG_OUT101_DETAIL__TXN_REF_NO']"
+	},
+	
+	{
+	 "name" : "ReferenceNumber",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_MSG_OUT101__REFERENCE_NO']"
+	},		
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"	
+	}
+]
+
+}

@@ -1,0 +1,197 @@
+{
+  "Excelpath" : "C:/PaymentModule/OBTFAutomation.xlsx",
+  "Sheet" : "PXDOTONL",
+  "Screenname" : "Outbound Cross Border Payments Transaction Input "
+
+"PXDOTONL" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PXDOTONL"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "New",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='New']"
+	},
+
+	{
+	 "name" : "SourceCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__SOURCE_CODE']"
+	},
+
+	{
+	 "name" : "TransferType",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_BRN_PX_OUT_TXN__TRANSFER_TYPE']"
+	},
+
+	{
+	 "name" : "NetworkCode",
+   	 "action" : "LOVField",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN__NETWORK']/../button",
+	 "Locator1" : ".//input[@id='1']",
+         "Locator2" : ".//button[normalize-space(text())='Fetch']",
+	 "Locator3" : ".//a[text()='R401_1121']"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "name" : "TransferCurrency",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__TXN_CCY']"
+	},
+
+	{
+	 "name" : "TransferAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__TXN_AMOUNTI']"
+	},
+
+	{
+	 "name" : "DebitAccount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__DR_AC_NO']"
+	},
+
+	{
+	 "name" : "CreditAccount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__CR_AC_NO']"
+	},
+
+	{
+	 "name" : "ChargeWhom",
+   	 "action" : "dropdown",
+    	 "Locator" : "//select[@id='BLK_BRN_PX_OUT_TXN__CHARGE_WHOM']"
+	},
+
+	{
+	 "name" : "ACTBANKIDENCODE",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN__ACC_WITH_INST2_CODE']"
+	},
+
+	{
+	 "name" : "InformationMSG",
+   	 "action" : "informationpopup"
+	},
+	
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "UltimateBENAccount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__BENEFICIARY1']"
+	},
+	
+	{
+	 "name" : "UltimateBICName",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__BENEFICIARY2']"
+	},
+
+	{
+	 "name" : "Beneficary Institution Party Identifier",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__BENEFICIARY_INST1']"
+	},
+
+	{
+	 "name" : "Beneficary Institution BIC Code",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__BENEFICIARY_INST2']"
+	},
+	
+	{
+	 "name" : "ReceiverBIC",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN__RECEIVER']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Enrich",
+   	 "action" : "clickjs",
+    	 "Locator" : "//button[@id='BLK_BRN_PX_OUT_TXN__BTN_ENRICH']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Pricing",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//span[text()='Pricing']"
+	},
+
+	{
+	 "name" : "Amount",
+   	 "action" : "clear",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTI']"
+	},
+
+	{
+	 "name" : "Amount1",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN_CHG__AMOUNTI']"
+	},
+	
+	{
+	 "name" : "Wave",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='BLK_BRN_PX_OUT_TXN_CHG__WAIVER']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Save']"
+	},
+	
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "name" : "TransactionReferenceNumber",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_BRN_PX_OUT_TXN__TXN_REF_NOI']"
+	},	
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"	
+	}
+]
+
+}

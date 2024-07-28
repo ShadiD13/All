@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: Administrator
+Build-Jdk: 21.0.1
+Bundle-Description: The slf4j API
+Bundle-Version: 
+Created-By: Maven Integration for Eclipse
+Implementation-Version: 1.7.30
+X-Compile-Source-JDK: 1.5
+X-Compile-Target-JDK: 1.5
+

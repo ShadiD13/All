@@ -1,0 +1,112 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/BookTransfer.xlsx",
+  "Sheet" : "PQSFUVAQ",
+  "Screenname" : "Warehouse Queue "
+
+"PQSFUVAQ" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PQSFUVAQ"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "TransactionReferenceNumber",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_FUTURE_TXN_QUEUE__TXN_REF_NOI']"
+	},
+
+	{
+	 "name" : "Search",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Search']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "CheckBox1",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='RSLT_CHKBOX0']"
+	},
+
+	{
+	 "name" : "ChangeValueDate",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[@id='CHANGE VALUE DATE']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Warehouse Queue - Change Value Date Details')]"
+	},
+
+	{
+	 "name" : "ActivationDate",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_FUTURE_TXN_QUEUE__ACTIVATION_DATEI']"
+	},
+
+	{
+	 "name" : "InstructionDate",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_FUTURE_TXN_QUEUE__INSTRUCTION_DATEI']"
+	},
+
+	{
+	 "name" : "Enrich",
+	 "action" : "clickjs",
+	 "Locator" : ".//button[@id='BLK_FUTURE_TXN_QUEUE__BTN_ENRICH']"
+	},
+
+	{
+	 "name" : "Ok",
+	 "action" : "clickjs",
+	 "Locator" : "//input[@id='BLK_FUTURE_TXN_QUEUE__QUEUE_REF_NOI']//following::input[@id='BTN_OK']"
+	},
+
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "Closeinfo1",
+   	 "action" : "informationpopup"
+	},
+	
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "clickjs",
+	 "Locator" : ".//input[@id='BTN_EXIT']"
+	}
+
+]
+}

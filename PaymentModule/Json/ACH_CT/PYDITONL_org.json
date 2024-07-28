@@ -1,0 +1,205 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/ACH CT.xlsx",  
+  "Sheet" : "PYDITONL",
+  "Screenname" : "ACH Credit Transfer Receipts Input "
+
+"PYDITONL" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PYDITONL"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "New",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='New']"
+	},
+
+	{
+	 "name" : "SourceCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN__SOURCE_CODE']"
+	},
+
+	{
+	 "name" : "NetworkCode",
+   	 "action" : "LOVField",
+    	 "Locator" : ".//input[@id='BLK_BRN_ACH_CT_IN_TXN__NETWORK_CODE']/../button",
+	 "Locator1" : ".//input[@id='1']",
+         "Locator2" : ".//button[normalize-space(text())='Fetch']",
+	 "Locator3" : ".//tr[@class='TBLoneTR'][1]"
+	},
+	
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "SenderTransactionIdentification",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN__SENDOR_TXN_REF_NO']"
+	},
+
+	{
+	 "name" : "SenderEndtoEndIdentification",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN__E2E_ID']"
+	},
+
+	{
+	 "name" : "CreditorAccount(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN__CR_AC_NO']"
+	},
+
+	{
+	 "name" : "DebtorName(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_ACH_CT_IN_TXN__DR_NAME']"
+	},
+
+	{
+	 "name" : "DebtorAccount(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN__DR_AC_NO']"
+	},
+
+	{
+	 "name" : "DebtorIBAN(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN__DR_AC_IBAN']"
+	},
+
+	{
+	 "name" : "DebtorAccountCurrency(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN__DR_AC_CCY']"
+	},
+
+	{
+	 "name" : "CountryofResidence(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_ACH_CT_IN_TXN__DBTR_CTRYOFRES']"
+	},
+
+	{
+	 "name" : "BICFI(CreditorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN_DTL__CDTA_FINID_BICFI']"
+	},
+
+	{
+	 "name" : "MemberIdentification(CreditorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_ACH_CT_IN_TXN_DTL__CDTA_FINID_MMBID']"
+	},
+
+	{
+	 "name" : "BICFI(DebtorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN_DTL__DTA_FINID_BICFI']"
+	},
+
+	{
+	 "name" : "MemberIdentification(DebtorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_ACH_CT_IN_TXN_DTL__DTA_FINID_MMBID']"
+	},
+
+	{
+	 "name" : "TransferAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN__TRANSFER_AMTI']"
+	},
+
+	{
+	 "name" : "ChargeBearer",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_BRN_ACH_CT_IN_TXN__CHRGBR']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Enrich",
+   	 "action" : "clickjs",
+    	 "Locator" : "//button[@id='BLK_BRN_ACH_CT_IN_TXN__BTN_ENRICH']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "ChargesInformation",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//span[text()='Charges Information']"
+	},
+
+	{
+   	 "action" : "scroll",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN_CHRGS__AMOUNTI']"
+	},
+
+	{
+	 "name" : "AmountClear",
+   	 "action" : "clear",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN_CHRGS__AMOUNTI']"
+	},
+
+	{
+	 "name" : "PricingAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN_CHRGS__AMOUNTI']"
+	},
+	
+	{
+	 "name" : "Wavier",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='BLK_BRN_ACH_CT_IN_TXN_CHRGS__WAIVER']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Save']"
+	},
+	
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "name" : "TransactionIdentification",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_BRN_ACH_CT_IN_TXN__TXN_REF_NOI']"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"
+	}
+
+]
+}

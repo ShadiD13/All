@@ -1,0 +1,216 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/ACH DD.xlsx",
+  "Sheet" : "PZDOTONL",
+  "Screenname" : "Originated ACH DD Input "
+
+"PZDOTONL" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PZDOTONL"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "New",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='New']"
+	},
+
+	{
+	 "name" : "SourceCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN__SOURCE_CODE']"
+	},
+
+	{
+	 "name" : "NetworkCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN__NETWORK_CODE']"
+	},
+
+	{
+	 "name" : "CreditorAccount(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN__CR_AC_NO']"
+	},
+
+	{
+	 "name" : "DebtorName(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN__DR_NAME']"
+	},
+	
+	{
+	 "name" : "DebtorAccount(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN__DR_AC_NO']"
+	},
+
+	{
+	 "name" : "DebtorIBAN(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN__DR_AC_IBAN']"
+	},
+
+	{
+	 "name" : "DebtorAccountCurrency(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN__DR_AC_CCY']"
+	},
+
+	{
+	 "name" : "BIFCI(DebtorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN__DR_AGT_FINID_BICFI']"
+	},
+
+	{
+	 "name" : "MemberIdentification(DebtorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PACS03_OUT_TXN__DR_AGT_FINID_CLR_MBID']"
+	},
+
+	{
+	 "name" : "BIFCI(CreditorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN__CR_AGT_FINID_BICFI']"
+	},
+
+	{
+	 "name" : "MemberIdentification(CreditorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PACS03_OUT_TXN__CR_AGT_FINID_CLR_MBID']"
+	},
+
+	{
+	 "name" : "TransferAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN__TRANSFER_AMTI']"
+	},
+
+	{
+	 "name" : "ChargeBearer",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_BRN_PACS03_OUT_TXN__CHGBR']"
+	},
+
+	{
+	 "name" : "MandateID",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN__MANDATE_ID']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Enrich",
+   	 "action" : "clickjs",
+    	 "Locator" : "//button[@id='BLK_BRN_PACS03_OUT_TXN__BTN_ENRICH']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "ChargesInformation",
+   	 "action" : "clickjs",
+    	 "Locator" : "/.//span[text()='Charges Information']"
+	},
+
+	{
+	 "action" : "scroll",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN_CHG__AMOUNTI']"
+	},
+
+	{
+	 "name" : "STD_CHGPricingAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN_CHG__AMOUNTI']"
+	},
+
+	{
+	 "name" : "STD_CHGWavier",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN_CHG__WAIVER']"
+	},
+
+	{
+	 "name" : "DD_OG_CHGPricingAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN_CHG__AMOUNTIRC1']"
+	},
+
+	{
+	 "name" : "DD_OG_CHGWavier",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN_CHG__WAIVERRC1']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Save']"
+	},
+	
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "name" : "TransactionIdentification",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_BRN_PACS03_OUT_TXN__TXN_REF_NOI']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountSTD_CHG1",
+	 "name1" : "PricingAmountSTD_CHGStatus1",
+	 "name2" : "OverallStatus",
+	 "action" : "ValidatePricingAmountFT_FX_COM1",
+	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN_CHG__AMOUNTI']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountSTD_CHG",
+	 "name1" : "PricingAmountSTD_CHGStatus",
+	 "name2" : "OverallStatus",
+	 "action" : "ValidatePricingAmountFT_FX_COM",
+	 "Locator" : "//input[@id='BLK_BRN_PACS03_OUT_TXN_CHG__AMOUNTI']"
+	},
+
+	{		
+	 "name"  : "ValidatePricingAmountDD_OG_CHG",
+	 "name1" : "PricingAmountDD_OG_CHGStatus,
+	 "name2" : "OverallStatus",
+	 "action" : "ValidatePricingAmountDD_OG_CHG",
+	 "Locator" : ".//input[@id='BLK_BRN_PACS03_OUT_TXN_CHG__AMOUNTIRC1']"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"
+	}
+
+]
+}

@@ -1,0 +1,77 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/BookTransfer.xlsx",
+  "Sheet" : "PBDOVIEW",
+  "Screenname" : "Outbound Book Transfer View "
+
+"PBDOVIEW" :
+[
+	{
+	 "name" : "SwitchBranch",
+	 "action" : "Branch240"
+	},
+	
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PBDOVIEW"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "EnterQuery",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Enter Query']"
+	},
+
+	{
+	 "name" : "Transaction Reference Number",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BOOK_TXN_VIEW__TXN_REF_NO']"
+	},
+
+	{
+	 "name" : "ExecuteQuery",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Execute Query']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "AccountingEntries",
+	 "action" : "accountingEntries"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "HomeBranch",
+	 "action" : "HomeBranch"
+	}
+
+]
+}

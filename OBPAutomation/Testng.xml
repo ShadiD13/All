@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="LoginTest">
+
+	<test name="Test1 Testcase in firefox">
+		<classes>
+			<class name="com.profinch.obp.ProfinchSeleniumOBP" />
+		</classes>
+	</test> <!-- Test -->
+
+	<!-- <test name="Test1 Testcase in chrome"> <classes> <class name="com.test.profinch.TransferMoney" 
+		/> </classes> </test> Test -->
+</suite>

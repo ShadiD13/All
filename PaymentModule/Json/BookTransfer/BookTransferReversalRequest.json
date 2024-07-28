@@ -1,0 +1,128 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/BookTransfer.xlsx",
+  "Sheet" : "ReversalRequest",
+  "Screenname" : "Outbound Book Transfer View Summary "
+
+"PBSOVIEW" :
+[
+	{
+	 "name" : "SwitchBranch",
+	 "action" : "Branch240"
+	},
+
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PBSOVIEW"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "TransactionReferenceNumber",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BOOK_TXN_VIEW_SUM__TXN_REF_NO']"
+	},
+
+	{
+	 "name" : "Search",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Search']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "CheckBox1",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='RSLT_CHKBOX0']"
+	},
+
+	{
+	 "name" : "ReversalRequest",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[@id='BTN_REVERSAL_REQUEST']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Book Reversal Request')]"
+	},
+
+	{
+	 "name" : "ReasonCode",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_BRN_OUT_TXN_RVR__RVR_RSN_CD']"
+	},
+
+	{
+	 "name" : "Save",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[text()='Save']"
+	},
+
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Book Reversal Request')]"
+	},
+
+	{
+	 "name" : "ReversalRequestReference",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_BRN_OUT_TXN_RVR__REVR_REF_NOI']"
+	},
+
+	{
+	 "name" : "Exit1",
+	 "action" : "Exitscreen"
+	},
+
+	{
+	 "action" : "defaultFrame"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "exitSummary"
+	},
+		
+	{
+	 "action" : "wait"
+	},
+	
+	{
+	 "name" : "HomeBranch",
+	 "action" : "HomeBranch"
+	}
+
+]
+}

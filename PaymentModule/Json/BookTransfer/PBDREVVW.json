@@ -1,0 +1,86 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/BookTransfer.xlsx",
+  "Sheet" : "PBDREVVW",
+  "Screenname" : "Book Transfer Reversal View "
+
+"PBDREVVW" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PBDREVVW"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "EnterQuery",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Enter Query']"
+	},
+
+	{
+	 "name" : "ReversalRequestReference",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_BOOK_RVR__REVR_REF_NO']"
+	},
+		
+	{
+	 "action" : "wait"
+	},
+	
+	{
+	 "name" : "ExecuteQuery",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Execute Query']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+	
+	{
+	 "name" : "ViewQueueAction",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[text()='View Queue Action' and @class='Abutton']"
+	},
+
+	{
+ 	 "action" : "viewQueueLogs"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "AccountingEntries",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[text()='Accounting Entries']"
+	},
+	
+	{
+ 	 "action" : "accountingentriesframe"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"
+	}
+
+]
+}

@@ -1,0 +1,193 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/ACH DD.xlsx",
+  "Sheet" : "PZDITONL",
+  "Screenname" : "ACH Debit Receipts Input "
+
+"PZDITONL" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PZDITONL"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "New",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='New']"
+	},
+
+	{
+	 "name" : "SourceCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_IN_TXN__SOURCE_CODE']"
+	},
+
+	{
+	 "name" : "NetworkCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_IN_TXN__NETWORK_CODE']"
+	},
+
+	{
+	 "name" : "SenderTransactionIdentification",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_IN_TXN__PMTINF_TXID']"
+	},
+
+	{
+	 "name" : "SenderEndtoEndIDentification",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_IN_TXN__E2E_ID']"
+	},
+
+	{
+	 "name" : "MessageIdentification",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_IN_TXN__MSGID']"
+	},
+
+	{
+	 "name" : "Account(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_IN_TXN__DR_AC_NO']"
+	},
+
+	{
+	 "name" : "CreditorName(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PACS03_IN_TXN__CR_NAME']"
+	},
+
+	{
+	 "name" : "CreditorAccount(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_IN_TXN__CR_AC_NO']"
+	},
+
+	{
+	 "name" : "CreditorIBAN(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PACS03_IN_TXN__CR_IBAN']"
+	},
+
+	{
+	 "name" : "CreditorAccountCurrency(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PACS03_IN_TXN__CR_AC_CCY']"
+	},
+	
+	{
+	 "name" : "BIFCI(CreditorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_IN_TXN__CR_AGT_FINID_BICFI']"
+	},
+
+	{
+	 "name" : "MemberIdentification(CreditorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PACS03_IN_TXN__CR_AGT_FINID_CLR_MBID']"
+	},
+
+	{
+	 "name" : "BIFCI(DebtorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_IN_TXN__DR_AGT_FINID_BICFI']"
+	},
+
+	{
+	 "name" : "MemberIdentification(DebtorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PACS03_IN_TXN__DR_AGT_FINID_CLR_MBID']"
+	},
+
+	{
+	 "name" : "ChargeBearer",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_BRN_PACS03_IN_TXN__CHGBR']"
+	},
+
+	{
+	 "name" : "TransferAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_IN_TXN__TRANSFER_AMTI']"
+	},
+
+	{
+	 "name" : "MandateID",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_BRN_PACS03_IN_TXN__MANDATE_ID']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Enrich",
+   	 "action" : "clickjs",
+    	 "Locator" : "//button[@id='BLK_BRN_PACS03_IN_TXN__BTN_ENRICH']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "ChargesInformation",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//span[text()='Charges Information']"
+	},
+
+	{
+	 "name" : "PricingAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_IN_TXN_CHG__AMOUNTI']"
+	},
+
+	{
+	 "name" : "Wavier",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='BLK_BRN_PACS03_IN_TXN_CHG__WAIVER']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Save']"
+	},
+	
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "name" : "TransactionReferenceNumber",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_BRN_PACS03_IN_TXN__TXN_REF_NOI']"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"
+	}
+
+]
+}

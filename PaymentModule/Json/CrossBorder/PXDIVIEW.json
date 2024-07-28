@@ -1,0 +1,59 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/CrossBorder.xlsx",
+  "Sheet" : "PXDIVIEW",
+  "Screenname" : "Inbound Cross Border Payments View "
+
+"PXDIVIEW" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PXDIVIEW"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "EnterQuery",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Enter Query']"
+	},
+
+	{
+	 "name" : "TransactionReferenceNumber",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_PXVWS_IN_TXN__TXN_REF_NO']"
+	},
+
+	{
+	 "name" : "ExecuteQuery",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Execute Query']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "AccountingEntries",
+	 "action" : "accountingEntries"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"
+	}
+
+]
+}

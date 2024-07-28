@@ -1,0 +1,138 @@
+{
+  "Excelpath" : "C:/PaymentModule/CrossBorder.xlsx",
+  "Sheet" : "Cancelrequest",
+  "Screenname" : "Outbound Cross Border Payments View Summary "
+
+"PXSOVIEW" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PXSOVIEW"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "TransactionReferenceNumber",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_PXVWS_OUT_TXN_SUMMARY__TXN_REF_NOI']"
+	},
+
+	{
+	 "name" : "Search",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Search']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "CheckBox1",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='RSLT_CHKBOX0']"
+	},
+
+	{
+	 "name" : "CancelRequest",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[@id='BTN_CANCEL_REQUEST']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Outbound Cross Border Cancellation Request')]"
+	},
+
+	{
+	 "name" : "SourceCode",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_PX_TXN_CANC_REQ_MASTER__SOURCE_CODE']"
+	},
+
+	{
+	 "name" : "Narrative(79)Line1",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_PX_TXN_CANC_REQ_REASON__NARRATIVE1']"
+	},
+
+	{
+	 "name" : "Narrative(79)Line2-35",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_PX_TXN_CANC_REQ_REASON__NARRATIVE2']"
+	},
+
+	{
+	 "name" : "Remarks",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_PX_TXN_CANC_REQ_MASTER__REMARKS']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[text()='Save']"
+	},
+
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Outbound Cross Border Cancellation Request')]"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "CancellationRequestReference",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_PX_TXN_CANC_REQ_MASTER__CANC_REQ_REF_NOI']"
+	},
+
+	{
+	 "name" : "Exit1",
+	 "action" : "Exitscreen"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	  "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Outbound Cross Border Payments View Summary')]"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "clickjs",
+	 "Locator" : ".//input[@id='BTN_EXIT']"
+	}
+
+]
+}

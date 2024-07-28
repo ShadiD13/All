@@ -1,0 +1,126 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/CrossBorder.xlsx",
+  "Sheet" : "InboundReverse",
+  "Screenname" : "Inbound Cross Border Payments View Summary "
+
+"PXSIVIEW" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PXSIVIEW"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "TransactionReferenceNumber",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_PXVWS_IN_TXN_SUMMARY__TXN_REF_NOI']"
+	},
+
+	{
+	 "name" : "Search",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Search']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "CheckBox1",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='RSLT_CHKBOX0']"
+	},
+
+	{
+	 "name" : "Reverse",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[@id='BTN_REVERSE']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Cross Border Transaction Reversal')]"
+	},
+
+	{
+	 "name" : "RejectCode",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_PX_REVERSE_TXN__REJECT_CODE']"
+	},
+
+	{
+	 "name" : "Remarks",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_PX_REVERSE_TXN__REMARKS']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[text()='Save']"
+	},
+
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Cross Border Transaction Reversal')]"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "ReferenceNumber",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_PX_REVERSE_TXN__TXN_REF_NOI']"
+	},
+
+	{
+	 "name" : "Exit1",
+	 "action" : "Exitscreen"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	  "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Inbound Cross Border Payments View Summary')]"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "clickjs",
+	 "Locator" : ".//input[@id='BTN_EXIT']"
+	}
+
+]
+}

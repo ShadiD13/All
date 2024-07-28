@@ -1,0 +1,119 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/BookTransfer_val.xlsx",
+  "Sheet" : "PBDOTONL",
+  "Screenname" : "Book Transfer Transaction Input "
+
+"PBDOTONL" :
+[
+  {
+    "name" : "FastPath",
+    "action" : "ScreenLaunch",
+    "screenId" : "PBDOTONL"
+  },
+
+  {
+   "action" : "Mainscreen"
+  },
+
+  {
+   "name" : "New",
+   "action" : "clickjs",
+   "Locator" : "//a[text()='New']"
+  },
+
+  {
+   "name" : "SourceCode",
+   "action" : "sendkeys",
+   "Locator" : "//input[@id='BLK_BOOK_TXN__SOURCE_CODE']"
+  },	
+
+  {
+   "name" : "SourceCode",
+   "action" : "sendkeys",
+   "Locator" : "//input[@id='BLK_BOOK_TXN__SOURCE_CODE']"
+  },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

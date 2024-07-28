@@ -1,0 +1,239 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/ACH DD.xlsx",
+  "Sheet" : "PCDDMAND",
+  "Screenname" : "Mandate Maintenance "
+
+"PCDDMAND" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PCDDMAND"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "New",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='New']"
+	},
+
+	{
+	 "name" : "NetworkCode",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_DEBTOR_MANDATE__NETWORK_CODE']"
+	},
+
+	{
+	 "name" : "MandateId",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_DEBTOR_MANDATE__MANDATE_ID']"
+	},
+
+	{
+	 "name" : "CustomerNumber",
+   	 "action" : "sendkeys",
+    	 "Locator" : "//input[@id='BLK_DEBTOR_MANDATE__CUST_NO']"
+	},
+
+	{
+	 "name" : "MandateType",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_DEBTOR_MANDATE__MANDATE_ID_TYPE']"
+	},
+
+	{
+	 "name" : "DebtorAccountNumber(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__DR_AC_NO']"
+	},
+
+	{
+	 "name" : "AccountCurrency(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__DR_AC_CCY']"
+	},
+
+	{
+	 "name" : "AccountBranch(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__DR_AC_BRN']"
+	},
+
+	{
+	 "name" : "DebtorAccountIBAN(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__DR_AC_IBAN']"
+	},
+
+	{
+	 "name" : "DebtorName(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__DR_NAME']"
+	},
+
+	{
+	 "name" : "BIC(DebtorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__DR_BIC']"
+	},
+
+	{
+	 "name" : "CreditorAccountNumber(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__CR_AC_NO']"
+	},
+
+	{
+	 "name" : "AccountCurrency(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__CR_AC_CCY']"
+	},
+
+	{
+	 "name" : "AccountBranch(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__CR_AC_BRN']"
+	},
+
+	{
+	 "name" : "CreditorAccountIBAN(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__CR_AC_IBAN']"
+	},
+
+	{
+	 "name" : "CreditorName(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__CR_NAME']"
+	},
+
+	{
+	 "name" : "BIC(CreditorDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__CR_BIC']"
+	},
+
+	{
+	 "name" : "DebtorBankCode(DebtorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__DR_BANK_CODE']"
+	},
+	
+	{
+	 "name" : "CreditorBankCode(CreditorAgentDetails)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__CR_BANK_CODE']"
+	},
+
+	{
+	 "name" : "FrequencyType",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_DEBTOR_MANDATE__FREQUENC_TYPE']"
+	},
+
+	{
+	 "name" : "TransactionCurrency",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__TXN_CCY']"
+	},
+
+	{
+	 "name" : "MaximumTransactionAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__TXN_AMTI']"
+	},
+
+	{
+	 "name" : "CollectionAmount",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__MAX_AMTI']"
+	},
+
+	{
+	 "name" : "FirstCollectionDate",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__FST_COLLECTION_DATEI']"
+	},
+
+	{
+	 "name" : "FinalCollectionDate",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__FIN_COLLECTION_DATEI']"
+	},
+
+	{
+	 "name" : "ExpiryDate",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__EXPIRY_DATEI']"
+	},
+
+	{
+	 "name" : "EffectiveDate",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_MANDATE__EFFECTIVE_DATEI']"
+	},
+
+	{
+	 "name" : "MandateStatus",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_DEBTOR_MANDATE__AGMT_STATUS']"
+	},
+
+	{
+	 "name" : "CustomAttributes",
+   	 "action" : "clickjs",
+    	 "Locator" : ".//a[@id='TAB_ATTRIBUTES']"
+	},
+
+	{
+	 "name" : "NoofPayments",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_DEBTOR_ATTR__NO_OF_PAYMENTSI']"
+	},
+
+	{
+	 "name" : "NoofPayAttributes",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_DEBTOR_ATTR__NO_OF_PAY_ATTR']"
+	},
+
+	{
+	 "name" : "RequestedStatus",
+   	 "action" : "dropdown",
+    	 "Locator" : ".//select[@id='BLK_DEBTOR_ATTR__REQUESTED_STATUS']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Save']"
+	},
+	
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"
+	}
+
+]
+}

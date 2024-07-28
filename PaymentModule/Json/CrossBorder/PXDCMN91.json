@@ -1,0 +1,102 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/CrossBorder.xlsx",
+  "Sheet" : "PXDCMN91",
+  "Screenname" : "Request for Payment of Charges "
+
+"PXDCMN91" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PXDCMN91"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "New",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='New']"
+	},
+
+	{
+	 "name" : "Receiver",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_MSGOUT_N91__RECEIVER']"
+	},
+
+	{
+	 "name" : "SWIFTMessageType",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_MSGOUT_N91__SWIFT_MSG_TYPE']"
+	},
+
+	{
+	 "name" : "RelatedRef(21)",
+   	 "action" : "LOVField",
+    	 "Locator" : ".//input[@id='BLK_MSGOUT_N91__TAG21']/../button",
+	 "Locator1" : ".//input[@id='1']",
+         "Locator2" : ".//button[normalize-space(text())='Fetch']",
+	 "Locator3" : ".//tr[@class='TBLoneTR'][1]"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "Currency",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_MSGOUT_N91__TAG32_CCY']"
+	},
+
+	{
+	 "name" : "Amount(32B)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_MSGOUT_N91__TAG32_AMOUNTI']"
+	},
+
+	{
+	 "name" : "DetailsofCharges(71B)",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_MSGOUT_N91__TAG71B_LINE1']"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Save",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Save']"
+	},
+	
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+	
+	{
+	 "name" : "ReferenceNumber",
+	 "action" : "gettext",
+	 "Locator" : ".//input[@id='BLK_MSGOUT_N91__REFERENCE_NO']"
+	},	
+
+	{
+	 "name" : "Exit",
+	 "action" : "Exitscreen"	
+	}
+]
+
+}

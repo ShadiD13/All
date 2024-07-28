@@ -1,0 +1,91 @@
+{
+  "Excelpath" : "C:/PaymentModule/Templates/BookTransfer.xlsx",
+  "Sheet" : "CancelRequest",
+  "Screenname" : "Warehouse Queue "
+
+"PQSFUVAQ" :
+[
+	{
+	 "name" : "FastPath",
+	 "action" : "ScreenLaunch",
+	 "screenId" : "PQSFUVAQ"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "name" : "TransactionReferenceNumber",
+   	 "action" : "sendkeys",
+    	 "Locator" : ".//input[@id='BLK_FUTURE_TXN_QUEUE__TXN_REF_NOI']"
+	},
+
+	{
+	 "name" : "Search",
+   	 "action" : "clickjs",
+    	 "Locator" : "//a[text()='Search']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "CheckBox1",
+   	 "action" : "clickjs",
+    	 "Locator" : "//input[@id='RSLT_CHKBOX0']"
+	},
+
+	{
+	 "name" : "Cancel",
+	 "action" : "clickjs",
+	 "Locator" : ".//a[@id='CANCEL']"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "switchframe1",
+	 "Locator" : ".//iframe[contains(@title,'Warehouse Queue - Cancel Details')]"
+	},
+
+	{
+	 "name" : "Remarks",
+	 "action" : "sendkeys",
+	 "Locator" : ".//input[@id='BLK_FUTURE_TXN_QUEUE__REMARKS']"
+	},
+
+	{
+	 "name" : "Ok",
+	 "action" : "clickjs",
+	 "Locator" : "//input[@id='BTN_OK']"
+	},
+
+	{
+	 "name" : "Closeinfo",
+   	 "action" : "informationpopup"
+	},
+	
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "action" : "Mainscreen"
+	},
+
+	{
+	 "action" : "wait"
+	},
+
+	{
+	 "name" : "Exit",
+	 "action" : "clickjs",
+	 "Locator" : ".//input[@id='BTN_EXIT']"
+	}
+
+]
+}
